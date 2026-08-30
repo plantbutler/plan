@@ -24,7 +24,7 @@ bench needs in cycles 2-3 are not on order.
 A quarter of a person-week: it is a chore, not a bet.
 
 ## Solution
-GitHub org `plant-butler`; transfer `plant_butler` as-is to become `firmware` (its history is
+GitHub org `plantbutler` (`plant-butler` was taken); transfer `plant_butler` as-is to become `firmware` (its history is
 clean — `secrets.h` was never committed); README-only `app`, `cad`, `backend`; the umbrella pins
 all five plus this plan as submodules and holds DECISIONS.md. Revoke the Gmail app password in
 `../arduino`, which is never pushed. Pin the PlatformIO platform version. Order pump, driver,
