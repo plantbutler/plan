@@ -37,7 +37,7 @@ switch and sealed sensors.
 - [x] `jcanton/plant_butler` → `plantbutler/firmware`, umbrella submodules — 2026-08-30
 - [x] DECISIONS.md, AGENTS.md everywhere — 2026-08-30
 - [x] Gmail app password revoked and deleted from the sketch — 2026-08-30
-- [ ] pin the PlatformIO platform version (`platform = renesas-ra@1.6.0`, the installed one)
+- [x] pin the PlatformIO platform version (`renesas-ra@1.6.0`) — 2026-08-30
 - [ ] order pump, driver, supply, float switch, sealed sensors
 
 ## Rabbit holes

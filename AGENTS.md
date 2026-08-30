@@ -2,7 +2,7 @@
 
 This is an [openproj](https://github.com/jcanton/openproj) repository: one markdown file per
 record, YAML frontmatter for the fields, the shaping document as the body, git as the database.
-Read the umbrella's [AGENTS.md](https://github.com/plantbutler/plantbutler/blob/main/AGENTS.md)
+Read the umbrella's [AGENTS.md](https://github.com/plantbutler/plantbutler/blob/main/AGENTS.md) (on this machine: `~/projects/plant-butler/AGENTS.md`)
 first for what the project is and where things stand.
 
 ## Running openproj
