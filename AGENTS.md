@@ -11,14 +11,14 @@ first for what the project is and where things stand.
 
 ```bash
 alias openproj='uv run --project ~/projects/openproj openproj'        # from the checkout
-export OPENPROJ_STATIC=~/projects/openproj/static                     # if using the pip-installed one
 openproj check .                    # every rule; exits non-zero only on blockers — run before every push
 openproj schedule .                 # derived dates, one line per record, with the reason
 openproj render . /tmp/plan-out     # static pages
 git clone --bare . /tmp/plan.git && openproj serve --repo /tmp/plan.git --auth dev   # the editable UI
 ```
 
-The pip-installed wheel does not carry `static/`, hence `OPENPROJ_STATIC`. Serve a **bare clone**,
+A pip-installed openproj older than 0.43.0 needs `OPENPROJ_STATIC=~/projects/openproj/static`;
+from 0.43.0 the wheel carries `static/` and `seed/`. Serve a **bare clone**,
 not this checkout: a save from the browser moves the branch without touching the working tree.
 Every command also leaves an `openproj.lock` (its flock, a pid) in the checkout; it is gitignored,
 never commit it.
@@ -53,4 +53,4 @@ openproj new issue . --title "…" --as jcanton        # something existing that
 Five products, six projects, sixteen pitches, three notes. Cycle 1 has four pitches `ready`
 (see `cycles/0001.md`); everything else is `shaping` with an appetite and dependencies, so the
 timeline can draw it. Known gap in the tool itself: a `parent` that names no record is not
-reported — jcanton/openproj#178.
+reported — jcanton/openproj#178. `serve` on a checkout warns since 0.43.0 (jcanton/openproj#179).
