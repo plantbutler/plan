@@ -8,7 +8,8 @@ tags:
 created_schema_version: 5
 ---
 ## Problem
-The code lives in a personal repo, the six architecture decisions live in a chat, old credentials
+The code lives in a personal repo, the architecture decisions
+live in a chat, old credentials
 sit in `../arduino`, and the parts the bench needs are not ordered.
 
 ## Appetite

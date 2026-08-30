@@ -4,9 +4,9 @@ kind: pitch
 title: Command hand-off
 parent: proj-a0ce3a
 status: ready
-owner: jcanton
+owner: claude
 assignees: [claude]
-reviewers: [claude]
+reviewers: [jcanton]
 review_waived: false
 priority: medium
 depends_on: [pitch-e982b9]

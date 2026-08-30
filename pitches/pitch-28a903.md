@@ -22,8 +22,8 @@ Half a person-week. Automation is gated on this.
 ## Solution
 Float switch both in the driver circuit and on a sense pin, watchdog, refuse when the manifold
 position is unknown, and status fields (float, valve, uptime, last command result) in every report.
-Acceptance: MCU held in reset with the driver pin high, a stuck-on command, a hose pulled off a
-pot — water stays in the tray.
+Acceptance: the MCU held in reset mid-dose (driver input floating), a stuck-on command, a hose
+pulled off a pot — water stays in the tray.
 
 ## Rabbit holes
 - Float switch placement.

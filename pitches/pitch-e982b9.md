@@ -4,9 +4,9 @@ kind: pitch
 title: Readings land on the NAS
 parent: proj-a0ce3a
 status: ready
-owner: jcanton
-assignees: [claude, jcanton]
-reviewers: [claude]
+owner: claude
+assignees: [claude]
+reviewers: [jcanton]
 review_waived: false
 priority: high
 depends_on: [pitch-24c5b3]

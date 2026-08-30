@@ -5,7 +5,7 @@ title: Rules that water
 parent: proj-81a6d7
 status: shaping
 priority: medium
-depends_on: [pitch-1b1e91, pitch-553c1b, pitch-28a903]
+depends_on: [pitch-1b1e91, pitch-553c1b, pitch-28a903, pitch-29bf77]
 tags:
 - backend
 created_schema_version: 5

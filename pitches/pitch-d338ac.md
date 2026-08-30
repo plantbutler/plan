@@ -5,7 +5,7 @@ title: Readings up the wire
 parent: proj-226479
 status: ready
 owner: jcanton
-assignees: [jcanton, claude]
+assignees: [jcanton]
 reviewers: [claude]
 review_waived: false
 priority: high
@@ -34,4 +34,5 @@ unattended.
 - WiFiS3 reconnect and the ESP32-S3 firmware updater: one-evening timebox.
 
 ## No-gos
-No TLS, no JSON, no OTA, no offline buffering, no commands, no manifold changes.
+No TLS, no JSON, no OTA, no offline buffering, no commands, no manifold changes beyond a
+null-safe logger.

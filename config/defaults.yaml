@@ -1,6 +1,7 @@
 # schema_version is the version new records are created at.
 schema_version: 5
-# One person at full availability; the cycle files override per person.
-nominal_availability: 1.0
+# Rate for anyone not on a cycle's roster, i.e. every unbet pitch; cycle files
+# override per person. One day a week.
+nominal_availability: 0.2
 # Of each cycle's window, how much is cool-down rather than build.
 cooldown_weeks: 2.0
