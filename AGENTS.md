@@ -20,6 +20,8 @@ git clone --bare . /tmp/plan.git && openproj serve --repo /tmp/plan.git --auth d
 
 The pip-installed wheel does not carry `static/`, hence `OPENPROJ_STATIC`. Serve a **bare clone**,
 not this checkout: a save from the browser moves the branch without touching the working tree.
+Every command also leaves an `openproj.lock` (its flock, a pid) in the checkout; it is gitignored,
+never commit it.
 
 ## Writing records
 
@@ -32,8 +34,8 @@ openproj new note  . --title "…" --as jcanton        # an idea that is not yet
 openproj new issue . --title "…" --as jcanton        # something existing that is broken
 ```
 
-- `product ← project ← pitch`. Products are the repositories; projects are milestones; pitches are
-  bets. There are no tasks yet, on purpose.
+- `product ← project ← pitch`. Products are the repositories (firmware, backend, app, cad,
+  umbrella — the plan itself has none); projects are milestones; pitches are bets. There are no tasks yet, on purpose.
 - Sizes are **person-weeks**. `nominal_availability` is 0.2 (a day a week); cycle files set it per
   person per cycle. Nobody types a forecast — dates are derived.
 - Only `depends_on` is stored, on the record that waits. Any kind may wait on any kind.
@@ -48,7 +50,7 @@ openproj new issue . --title "…" --as jcanton        # something existing that
 
 ## State on 2026-08-30
 
-Five products, six projects, fifteen pitches, three notes. Cycle 1 has four pitches `ready`
+Five products, six projects, sixteen pitches, three notes. Cycle 1 has four pitches `ready`
 (see `cycles/0001.md`); everything else is `shaping` with an appetite and dependencies, so the
 timeline can draw it. Known gap in the tool itself: a `parent` that names no record is not
 reported — jcanton/openproj#178.
