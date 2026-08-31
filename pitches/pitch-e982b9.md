@@ -3,8 +3,11 @@ id: pitch-e982b9
 kind: pitch
 title: Readings land on the NAS
 parent: proj-a0ce3a
-status: in_progress
+status: done
 start_date: 2026-08-31
+end_date: '2026-08-31'
+prs:
+- 'plantbutler/backend#1'
 owner: claude
 assignees: [claude]
 reviewers: [jcanton]
