@@ -3,7 +3,8 @@ id: pitch-e982b9
 kind: pitch
 title: Readings land on the NAS
 parent: proj-a0ce3a
-status: ready
+status: in_progress
+start_date: 2026-08-31
 owner: claude
 assignees: [claude]
 reviewers: [jcanton]
