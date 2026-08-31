@@ -12,14 +12,14 @@ created_schema_version: 5
 person_weeks: 0.5
 ---
 ## Problem
-Readings are raw counts keyed by controller and channel; there is no notion of valve, pot, plant,
+Readings are raw counts keyed by controller and channel; there is no notion of outlet, pot, plant,
 or what "dry" means for each sensor.
 
 ## Appetite
 Half a person-week.
 
 ## Solution
-Channel → valve → pot → plant mapping in the backend, so repotting or swapping a hose is an edit.
+Channel → outlet → pot → plant mapping in the backend, so repotting or swapping a hose is an edit.
 Two calibration numbers per channel, overwritten on recalibration; % computed at read time and
 never stored, so recalibrating reinterprets history instead of losing it. Until the app exists,
 edits are a seed file or curl.

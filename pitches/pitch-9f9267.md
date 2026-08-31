@@ -24,8 +24,9 @@ Half a person-week, once the bench is available.
 
 ## Solution
 One manifold, five outlets: pump, driver, own supply, a one-litre reservoir, the inline flow meter
-and the hall float sensor on a bench, driven from a serial command. Deliverables: ml/s per outlet,
-verdicts on the four unknowns, a KiCad schematic and a BOM.
+and the hall float sensor on a bench, driven from a serial command. Deliverables: ml/s per outlet, a verdict
+on flow-meter accuracy (ml dosing, or fall back to seconds), verdicts on the four unknowns, a
+KiCad schematic and a BOM.
 
 ## Rabbit holes
 - Precise dosing, or a custom PCB. Neither.

@@ -24,7 +24,8 @@ last-seen do not exist.
 Half a person-week. The stretch bet of cycle 1: software only, first to cut.
 
 ## Solution
-A one-shot, expiring "water valve V for S seconds" (or "stop") queued in the backend, handed to the
+A one-shot, expiring "water outlet k: N ml, capped at S seconds" (or "stop") queued in the
+backend, handed to the
 board in the response to its next report, acknowledged by the report after that. The response also
 carries the next report interval. A fake-device script makes the backend testable without hardware.
 
