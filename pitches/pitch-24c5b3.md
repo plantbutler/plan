@@ -3,7 +3,7 @@ id: pitch-24c5b3
 kind: pitch
 title: Org, repos, decisions, shopping list
 parent: proj-73f0f3
-status: in_progress
+status: done
 start_date: 2026-08-30
 owner: jcanton
 assignees: [jcanton]
@@ -16,6 +16,9 @@ tags:
 - chore
 created_schema_version: 5
 person_weeks: 0.25
+prs:
+- '-'
+end_date: '2026-08-31'
 ---
 ## Problem
 Code lived in `jcanton/plant_butler`, the architecture decisions lived in a chat, and the parts the
