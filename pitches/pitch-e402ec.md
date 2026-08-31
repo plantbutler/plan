@@ -20,11 +20,14 @@ One person-week.
 
 ## Solution
 Smooth over a window, N consecutive dry readings, per-pot cooldown, daily cap, quiet hours; never
-enqueue on a stale heartbeat or an empty reservoir. Testable offline against the fake device. Done
-means one pot watered automatically in the flat during a supervised week.
+enqueue on a stale heartbeat or an empty reservoir. Per-pot mode ladder: manual (water-now only)
+→ learning (rules propose; Jacopo is at the pot, approves, watches, verdicts the dose ok / too
+much / too little) → auto (rules enqueue directly). Testable offline against the fake device.
+Done means the first pot graduated to auto after a clean learning week.
 
 ## Rabbit holes
 - Rule tuning on noisy sensors.
 
 ## No-gos
-No weather, no ML, no per-species profiles, no closed loop during a dose.
+No weather, no ML, no per-species profiles, no closed loop during a dose, no auto-graduation —
+the flip to auto is a human act, per pot.

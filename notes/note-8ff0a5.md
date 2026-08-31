@@ -20,3 +20,6 @@ v1 waters on thresholds. Adaptive dosing needs a season of readings to tune agai
 cycle-1 pipeline is what collects them — so let the data pile up and shape an "adaptive dosing"
 pitch when there is something to fit. The descriptive fields cost nothing now and make the app
 worth looking at.
+
+The learning phase's verdict log — dose ok / too much / too little, with the readings around
+each dose — is exactly the dataset adaptive dosing later fits on.

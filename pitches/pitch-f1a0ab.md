@@ -20,8 +20,9 @@ One person-week.
 
 ## Solution
 One list, one detail, one wizard: edit a pot and its plant, set thresholds, remap channels and
-valves, capture calibration hardware-in-the-loop (sensor in air, tap; in water, tap) using the
-next-interval knob.
+outlets, capture calibration hardware-in-the-loop (sensor in air, tap; in water, tap) using the
+next-interval knob; approve a learning-mode proposal and verdict the dose; flip a pot
+manual → learning → auto.
 
 ## Rabbit holes
 - Forms and state management ballooning into an architecture exercise.
