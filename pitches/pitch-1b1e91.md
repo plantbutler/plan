@@ -3,7 +3,9 @@ id: pitch-1b1e91
 kind: pitch
 title: Command hand-off
 parent: proj-a0ce3a
-status: ready
+status: in_progress
+start_date: 2026-08-31
+prs: ['plantbutler/backend#2']
 owner: claude
 assignees: [claude]
 reviewers: [jcanton]
