@@ -13,19 +13,22 @@ created_schema_version: 5
 person_weeks: 0.5
 ---
 ## Problem
-Nothing has ever pumped water under software control: no driver, no pump supply, no float switch,
-no wiring diagram, no ml/s figure, and nobody knows whether the manifold seals or has a hard stop.
+Nothing has ever pumped water under software control, and the magnet-ball manifold hangs on four
+unknowns: does the neodymium magnet lift the ball against pump pressure (~0.6 bar at dead head),
+does the caged ball reseat and seal on its o-ring, does the hall count screw revolutions reliably
+(gear torque is already proven on the printed reduction gears), and do the cheap capacitive
+sensors drift or corrode when powered 24/7.
 
 ## Appetite
-Half a person-week, once the parts have arrived and the bench is available.
+Half a person-week, once the bench is available.
 
 ## Solution
-Pump, driver, own supply, a one-litre reservoir and a float switch on a bench, driven from a serial
-command. Deliverables: ml/s per output, verdicts on seal, head, servo torque and hard stop, a KiCad
-schematic and a BOM.
+One manifold, five outlets: pump, driver, own supply, a one-litre reservoir, the inline flow meter
+and the hall float sensor on a bench, driven from a serial command. Deliverables: ml/s per outlet,
+verdicts on the four unknowns, a KiCad schematic and a BOM.
 
 ## Rabbit holes
 - Precise dosing, or a custom PCB. Neither.
 
 ## No-gos
-No PCB, no flow meter, no enclosure. The servo and pump never draw from the board's 5 V pin.
+No PCB, no enclosure. The servo and pump never draw from the board's 5 V pin.

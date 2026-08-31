@@ -20,16 +20,19 @@ the pump dry or onto the floor, and nobody would know.
 Half a person-week. Automation is gated on this.
 
 ## Solution
-Float switch both in the driver circuit and on a sense pin, watchdog, refuse when the manifold
-position is unknown, and status fields (float, valve, uptime, last command result) in every report.
-Acceptance: the MCU held in reset mid-dose (driver input floating), a stuck-on command, a hose
-pulled off a pot — water stays in the tray.
+Float sensor as a hall switch: magnet inside the tank float, hall on the outside, trips on low
+water with margin — wired both into the driver circuit and onto a sense pin. Watchdog; refuse when
+cart position is unknown; flow sanity from the inline flow meter — pump on with no pulses within
+seconds cuts the pump and flags a fault, pulses with the pump off flag a leak; status fields
+(float, outlet, uptime, last command result) in every report. Acceptance: the MCU held in reset
+mid-dose (driver input floating), a stuck-on command, a hose pulled off a pot — water stays in the
+tray.
 
 ## Rabbit holes
-- Float switch placement.
+- Float and hall placement.
 
 ## No-gos
-No leak sensors, no flow meter, no closable valves, no battery backup.
+No leak sensors, no closable valves, no battery backup.
 
 ## For later
-An MCU-independent run-time limiter; a tray leak sensor; a flow meter.
+An MCU-independent run-time limiter; a tray leak sensor.
