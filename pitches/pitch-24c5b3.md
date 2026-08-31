@@ -38,7 +38,7 @@ switch and sealed sensors.
 - [x] DECISIONS.md, AGENTS.md everywhere — 2026-08-30
 - [x] Gmail app password revoked and deleted from the sketch — 2026-08-30
 - [x] pin the PlatformIO platform version (`renesas-ra@1.6.0`) — 2026-08-30
-- [ ] order pump, driver, supply, float switch, sealed sensors
+- [x] order pump, driver, supply, float switch, sealed sensors
 
 ## Rabbit holes
 - CI, badges, templates and README polish. None of it now.
