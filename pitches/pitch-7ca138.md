@@ -3,9 +3,14 @@ id: pitch-7ca138
 kind: pitch
 title: Hello, pots
 parent: proj-8fb1fc
-status: shaping
+status: in_progress
+owner: claude
+assignees: [claude]
+reviewers: [jcanton]
 priority: medium
 depends_on: [pitch-553c1b]
+cycle: 2
+start_date: 2026-09-01
 tags:
 - app
 created_schema_version: 5
