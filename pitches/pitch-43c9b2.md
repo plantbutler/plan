@@ -11,6 +11,7 @@ priority: medium
 depends_on: [pitch-e402ec]
 cycle: 2
 start_date: 2026-09-01
+prs: ['plantbutler/backend#5']
 tags:
 - backend
 created_schema_version: 5
