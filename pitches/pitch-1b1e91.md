@@ -3,8 +3,9 @@ id: pitch-1b1e91
 kind: pitch
 title: Command hand-off
 parent: proj-a0ce3a
-status: in_progress
+status: done
 start_date: 2026-08-31
+end_date: '2026-09-01'
 prs: ['plantbutler/backend#2']
 owner: claude
 assignees: [claude]
