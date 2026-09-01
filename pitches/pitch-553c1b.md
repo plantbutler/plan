@@ -3,9 +3,14 @@ id: pitch-553c1b
 kind: pitch
 title: Pots, plants and calibration
 parent: proj-81a6d7
-status: shaping
+status: in_progress
+owner: claude
+assignees: [claude]
+reviewers: [jcanton]
 priority: medium
 depends_on: [pitch-e982b9]
+cycle: 2
+start_date: 2026-09-01
 tags:
 - backend
 created_schema_version: 5
