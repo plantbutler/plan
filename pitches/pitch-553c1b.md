@@ -3,7 +3,7 @@ id: pitch-553c1b
 kind: pitch
 title: Pots, plants and calibration
 parent: proj-81a6d7
-status: in_progress
+status: done
 owner: claude
 assignees: [claude]
 reviewers: [jcanton]
@@ -11,6 +11,7 @@ priority: medium
 depends_on: [pitch-e982b9]
 cycle: 2
 start_date: 2026-09-01
+end_date: '2026-09-01'
 prs: ['plantbutler/backend#3']
 tags:
 - backend
