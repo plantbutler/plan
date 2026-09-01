@@ -3,7 +3,7 @@ id: pitch-43c9b2
 kind: pitch
 title: Tell me when it's wrong
 parent: proj-81a6d7
-status: in_progress
+status: done
 owner: claude
 assignees: [claude]
 reviewers: [jcanton]
@@ -11,6 +11,7 @@ priority: medium
 depends_on: [pitch-e402ec]
 cycle: 2
 start_date: 2026-09-01
+end_date: '2026-09-01'
 prs: ['plantbutler/backend#5']
 tags:
 - backend
