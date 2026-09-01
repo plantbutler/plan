@@ -11,6 +11,7 @@ priority: medium
 depends_on: [pitch-553c1b]
 cycle: 2
 start_date: 2026-09-01
+prs: ['plantbutler/app#1']
 tags:
 - app
 created_schema_version: 5
