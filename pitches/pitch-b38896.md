@@ -11,6 +11,7 @@ priority: high
 depends_on: []
 cycle: 2
 start_date: 2026-09-02
+prs: ['plantbutler/cad#1']
 tags:
 - cad
 - openscad
