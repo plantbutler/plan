@@ -3,9 +3,14 @@ id: pitch-088ddf
 kind: pitch
 title: Water now and a chart
 parent: proj-8fb1fc
-status: shaping
+status: in_progress
+owner: claude
+assignees: [claude]
+reviewers: [jcanton]
 priority: medium
-depends_on: [pitch-7ca138, pitch-1b1e91, pitch-cd0f19]
+depends_on: [pitch-f1a0ab, pitch-1b1e91]
+cycle: 2
+start_date: 2026-09-02
 tags:
 - app
 created_schema_version: 5
