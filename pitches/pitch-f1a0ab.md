@@ -3,9 +3,15 @@ id: pitch-f1a0ab
 kind: pitch
 title: Manage the garden
 parent: proj-8fb1fc
-status: shaping
-priority: low
-depends_on: [pitch-088ddf, pitch-e402ec]
+status: in_progress
+owner: claude
+assignees: [claude]
+reviewers: [jcanton]
+priority: medium
+depends_on: [pitch-7ca138, pitch-e402ec]
+cycle: 2
+start_date: 2026-09-02
+prs: ['plantbutler/backend#6', 'plantbutler/app#2']
 tags:
 - app
 created_schema_version: 5
