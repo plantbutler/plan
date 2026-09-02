@@ -3,7 +3,7 @@ id: pitch-b38896
 kind: pitch
 title: Manifold in OpenSCAD with ball gates
 parent: proj-4622e7
-status: in_progress
+status: done
 owner: claude
 assignees: [claude]
 reviewers: [jcanton]
@@ -12,6 +12,7 @@ depends_on: []
 cycle: 2
 start_date: 2026-09-02
 prs: ['plantbutler/cad#1']
+end_date: '2026-09-02'
 tags:
 - cad
 - openscad
