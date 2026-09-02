@@ -3,7 +3,7 @@ id: pitch-088ddf
 kind: pitch
 title: Water now and a chart
 parent: proj-8fb1fc
-status: in_progress
+status: done
 owner: claude
 assignees: [claude]
 reviewers: [jcanton]
@@ -11,6 +11,7 @@ priority: medium
 depends_on: [pitch-f1a0ab, pitch-1b1e91]
 cycle: 2
 start_date: 2026-09-02
+end_date: '2026-09-02'
 prs: ['plantbutler/backend#7', 'plantbutler/app#3']
 tags:
 - app
