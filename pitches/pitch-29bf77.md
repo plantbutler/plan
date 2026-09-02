@@ -13,7 +13,7 @@ created_schema_version: 5
 person_weeks: 1
 ---
 ## Problem
-The old rotary driver dead-reckoned with delays and lied about home by eighty seconds. The real
+The old driver dead-reckoned with delays and lied about home by eighty seconds. The real
 mechanism is now decided: a continuous SG90 drives a lead screw through 3D-printed reduction gears,
 the screw moves a cart carrying a neodymium magnet along the manifold, and the magnet lifts a caged
 ball off an o-ring seat to open one outlet. Nothing measures where the cart is yet.

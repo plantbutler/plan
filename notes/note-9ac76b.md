@@ -1,7 +1,7 @@
 ---
 id: note-9ac76b
 kind: note
-title: Solenoid valves instead of the rotary manifold?
+title: Solenoid valves instead of the lead-screw manifold?
 status: thinking
 created_schema_version: 5
 written_by: claude
