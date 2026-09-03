@@ -20,13 +20,16 @@ the pump dry or onto the floor, and nobody would know.
 Half a person-week. Automation is gated on this.
 
 ## Solution
-Float sensor as a hall switch: magnet inside the tank float, hall on the outside, trips on low
-water with margin — wired both into the driver circuit and onto a sense pin. Watchdog; refuse when
-cart position is unknown; flow sanity from the inline flow meter — pump on with no pulses within
-seconds cuts the pump and flags a fault, pulses with the pump off flag a leak; status fields
-(float, outlet, uptime, last command result) in every report. Acceptance: the MCU held in reset
-mid-dose (driver input floating), a stuck-on command, a hose pulled off a pot — water stays in the
-tray.
+Float sensor as a hall switch: magnet on the tank float, hall outside; a stop caps the float's
+travel at the trip level so magnet present means water above the line and every sensor failure
+reads as refuse. The bench has it on a sense pin only; this pitch puts the hardware gate back
+between the pump pin, the float and the relay's input, so a hung sketch cannot pump. Until then
+the firmware carries it: watchdog, a hard run-time cap beside the line that asserts the pump pin,
+refuse when cart position is unknown, and flow sanity from the inline flow meter — pump on with no
+pulses within seconds cuts the pump and flags a fault, pulses with the pump off flag a leak;
+status fields (float, outlet, uptime, last command result) in every report. Acceptance: the MCU
+held in reset mid-dose, a hung sketch with the pump pin asserted, a stuck-on command, a hose
+pulled off a pot — water stays in the tray.
 
 ## Rabbit holes
 - Float and hall placement.

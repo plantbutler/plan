@@ -23,8 +23,9 @@ sensors drift or corrode when powered 24/7.
 Half a person-week, once the bench is available.
 
 ## Solution
-One manifold, five outlets: pump, driver, own supply, a one-litre reservoir, the inline flow meter
-and the hall float sensor on a bench, driven from a serial command. Deliverables: ml/s per outlet, a verdict
+One manifold, five outlets: pump, relay, a one-litre reservoir, the inline flow meter and the hall
+float sensor on a bench, driven from a serial command. Wiring, pin map and bring-up order are in
+cad/wiring. Deliverables: ml/s per outlet, a verdict
 on flow-meter accuracy (ml dosing, or fall back to seconds), verdicts on the four unknowns, a
 KiCad schematic and a BOM.
 
@@ -32,4 +33,5 @@ KiCad schematic and a BOM.
 - Precise dosing, or a custom PCB. Neither.
 
 ## No-gos
-No PCB, no enclosure. The servo and pump never draw from the board's 5 V pin.
+No PCB, no enclosure. The pump never draws from a 5 V rail; the servo does, on the R4's buck, fed
+from the barrel jack and with its bulk cap at the plug.
