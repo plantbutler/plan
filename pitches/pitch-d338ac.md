@@ -3,7 +3,7 @@ id: pitch-d338ac
 kind: pitch
 title: Readings up the wire
 parent: proj-226479
-status: ready
+status: shelved
 owner: jcanton
 assignees: [jcanton]
 reviewers: [claude]
@@ -16,6 +16,12 @@ tags:
 created_schema_version: 5
 person_weeks: 0.75
 ---
+## Shelved 2026-09-03
+Superseded by "Bench sketch", which carries the reporting half of this pitch. Splitting reporting
+from commands would have meant two passes over the same files, and this pitch's no-go "no commands"
+had become false the moment the bench arrived. Its two unknowns — does the idle board still talk,
+and does it survive 48 hours — are unchanged and now belong to that pitch.
+
 ## Problem
 A0-A3 raw counts reach two screens and nothing else. The WiFiS3 path is eighteen months unproven
 and the old Network lib spins forever on a lost connection.

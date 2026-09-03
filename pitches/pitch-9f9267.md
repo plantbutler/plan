@@ -5,7 +5,7 @@ title: Bench rig
 parent: proj-4622e7
 status: shaping
 priority: high
-depends_on: [pitch-24c5b3, pitch-819142]
+depends_on: [pitch-24c5b3, pitch-819142, pitch-cd0f19]
 tags:
 - cad
 - hardware
