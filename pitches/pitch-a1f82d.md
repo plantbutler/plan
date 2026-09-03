@@ -31,6 +31,10 @@ maps watering regime, soil and pot size onto a target band. Season and the envir
 raise recommendations the app asks you to approve.
 
 ## Rabbit holes
+- **Blocked on a key.** The 2026-09-03 re-probe (see the note) found Perenual and Trefle both
+  alive and both requiring one, and keys never enter a repository. Nothing can call a care source
+  until Jacopo has signed up. The taxonomy hop, the cache, the mapping and the type-it-in fallback
+  do not need one and can be built first.
 - Our percentage is a two-point calibration between air and tap water, not volumetric water content.
   Any code that treats a published percentage as ours is wrong; care sources give regimes, and the
   numbers stay local.
