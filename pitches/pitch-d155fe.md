@@ -23,8 +23,8 @@ Half a person-week.
 ## Solution
 Three things the backend can do and the board cannot. Record refills as human events, so a float
 that has not moved across ten refills is provably stuck rather than merely idle. Read the board's
-`fstale=` (seconds since D5 last changed) and raise when a float has been frozen across refills
-and doses. And hold the durable half of the float/flow contradiction latch: when the board reports
+`ch204` (seconds since D5 last changed, a stored channel rather than an ignored key) and raise when
+a float has been frozen across refills and doses. And hold the durable half of the float/flow contradiction latch: when the board reports
 that the float said full and the meter saw nothing, stop queuing commands until a human confirms,
 because a board reset clears the firmware's own latch. Refusing means refusing to water; readings
 keep arriving and keep being stored throughout.
@@ -36,4 +36,4 @@ id that posts once does not page the phone hourly forever.
 - Guessing tank volume from flow totals. The refill is a human event; keep it one.
 
 ## No-gos
-No firmware changes: the board's whole contribution is `fstale=` and the contradiction report.
+No firmware changes: the board's whole contribution is `ch204` and the contradiction report.
