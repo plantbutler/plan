@@ -3,13 +3,15 @@ id: pitch-f82abf
 kind: pitch
 title: A pot has an identity
 parent: proj-3a84fc
-status: in_progress
+status: done
 owner: claude
 assignees: [claude]
 reviewers: [jcanton]
 priority: high
 cycle: 1
 start_date: 2026-09-03
+end_date: '2026-09-03'
+prs: ['plantbutler/backend#8', 'plantbutler/backend#9', 'plantbutler/plantbutler#1', 'plantbutler/app#4']
 tags:
 - backend
 - app
@@ -47,6 +49,23 @@ table is open anyway.
 ## No-gos
 No migrations framework. No mapping UI beyond what "Manage the garden" already has. No change to
 what the board sends: raw counts keyed on (controller, channel) stay exactly as they are.
+
+## Progress
+Done 2026-09-03. Backend plantbutler/backend#8 and #9, umbrella plantbutler/plantbutler#1
+(decision 16), app plantbutler/app#4. Backend 0.8.0 is deployed on the NAS; the one-time rebuild
+ran against a copy of the live database first and then for real, and left `butler.db.pre-identity.bak`
+beside it.
+
+Four rounds of adversarial review found eighteen defects a green suite did not, including two
+wet-direction ones the branch introduced itself in the dose-attribution rework, and two ways the
+nickname could still move on its own after the app was rekeyed. Two known limits ship with it: a
+dose can escape both halves of the watering gate when attribution has failed and the pot has since
+been remapped, and a `POST /pot` with no id and a name that already exists still upserts onto that
+pot rather than refusing. The second is a wire-contract decision, not a bug, and is written up for
+its own pitch if it ever matters.
+
+Not done: the app has never been driven on the phone against the deployed backend — that needs the
+adb port over the tailnet.
 
 ## For later
 A pot's history across being repotted into a different vessel — the id survives, the pot does not —
