@@ -9,7 +9,7 @@ assignees: [claude]
 reviewers: [jcanton]
 priority: high
 depends_on: []
-cycle: 2
+cycle: 1
 start_date: 2026-09-02
 prs: ['plantbutler/cad#1']
 end_date: '2026-09-02'

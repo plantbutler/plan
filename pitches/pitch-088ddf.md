@@ -9,7 +9,7 @@ assignees: [claude]
 reviewers: [jcanton]
 priority: medium
 depends_on: [pitch-f1a0ab, pitch-1b1e91]
-cycle: 2
+cycle: 1
 start_date: 2026-09-02
 end_date: '2026-09-02'
 prs: ['plantbutler/backend#7', 'plantbutler/app#3']
