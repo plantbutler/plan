@@ -3,7 +3,8 @@ id: pitch-a1f82d
 kind: pitch
 title: What does this plant want?
 parent: proj-6de564
-status: shaping
+status: in_progress
+start_date: 2026-09-04
 owner: claude
 assignees: [claude]
 reviewers: [jcanton]
@@ -29,6 +30,11 @@ source, decided 2026-09-04 after both were probed with real keys — and cache t
 forever with its fetch date. If Trefle is offline or has nothing for that species, the numbers are
 typed in. No ranking, no second source to fall back to, nothing to reconcile.
 
+GBIF knows scientific names and nothing else, so a name it cannot place goes to Trefle's own
+search, which matches common names, survives a typo, and answers with the species' photograph.
+That picture is how somebody confirms they found their plant: "peace lily" is two species and no
+spelling settles which one is on the windowsill.
+
 Trefle carries no watering regime at all (`soil_humidity` was empty for every species sampled), so
 the target band does not come from it and never did: a local table over soil, pot size and plant
 type proposes one, and the user adjusts it. What Trefle usefully adds is light and atmospheric
@@ -51,8 +57,10 @@ approve.
 - A mistyped species name mints a junk cache row unless the taxonomy hop runs first.
 
 ## No-gos
-No scrapers. No Perenual, and no ranking or fallback chain: Trefle or the user's own typing. No automatic change to a
-watering number without a human approving it. No ML, no weather, no photos.
+No scrapers. No Perenual, and no ranking or fallback chain: Trefle or the user's own typing. No
+automatic change to a watering number without a human approving it. No ML, no weather. No
+photographs of your own plants — that is its own pitch; the care source's picture of the species
+is shown, because a search by common name is confirmed by eye.
 
 ## For later
 Fitting the dose against the verdict log — the adaptive dosing the "Plant care data, Planta-style"
