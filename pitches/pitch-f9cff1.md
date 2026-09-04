@@ -3,9 +3,10 @@ id: pitch-f9cff1
 kind: pitch
 title: Where is the butler?
 parent: proj-3a84fc
-status: in_progress
+status: done
 start_date: 2026-09-04
-prs: ['plantbutler/backend#17', 'plantbutler/app#12']
+end_date: '2026-09-04'
+prs: ['plantbutler/backend#17', 'plantbutler/backend#20', 'plantbutler/app#12']
 owner: claude
 assignees: [claude]
 reviewers: [jcanton]
@@ -47,7 +48,7 @@ No accounts. No discovery scan of the network. No holding several servers at onc
 single static token the backend already has.
 
 ## Progress
-Built 2026-09-04, not yet driven on a phone — adb was off while the queue was worked through.
+Done 2026-09-04, backend 0.13.0 (in 0.14.0 on the NAS) and driven on the phone.
 Backend 0.13.0 gained `GET /hello`, the one gated route that touches no database, because nothing
 that existed could tell a wrong address from a wrong token: the reads are ungated and answer a
 wrong token exactly as they answer a right one, and every gated route writes something. The app
@@ -60,6 +61,15 @@ half the pitch did not name: not only can nothing construct the client once at s
 already in the air from the old address can land on the new one's screen. Every request now runs
 under one cancellable job. The cache also carries the address it came from, so a delete that failed
 cannot show one server's garden under another's name.
+
+Driven on the phone, which is where the three sentences had to earn themselves: a wrong token
+against the real NAS said "100.95.142.113:9380 is a butler and it refused that token. The address
+is right — the token is not."; a dead port said "nothing answered ... check the address, and that
+this phone is on the tailnet"; and pointing it at the NAS's own web UI on 5000 said "something
+answers ... but it is not your butler". Installing over the old app landed straight on the setup
+screen, prefilled, and one tap connected it. The stored file holds no readable address or token.
+Settings then moved the phone to a laptop backend and back, and the laptop's garden never appeared
+under the NAS.
 
 ## For later
 A QR code the NAS can show, carrying address and token, so setting up the next phone is a scan.

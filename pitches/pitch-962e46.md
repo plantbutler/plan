@@ -3,9 +3,10 @@ id: pitch-962e46
 kind: pitch
 title: A picture of the plant, over time
 parent: proj-6de564
-status: in_progress
+status: done
 start_date: 2026-09-04
-prs: ['plantbutler/backend#18', 'plantbutler/app#13']
+end_date: '2026-09-04'
+prs: ['plantbutler/backend#19', 'plantbutler/backend#20', 'plantbutler/app#13']
 owner: claude
 assignees: [claude]
 reviewers: [jcanton]
@@ -49,7 +50,7 @@ No editing, cropping or filters. No cloud storage and no sharing off the tailnet
 pictures. No time-lapse video — a strip is a strip.
 
 ## Progress
-Built 2026-09-04, not yet driven on a phone — the camera path is the half no JVM test can reach.
+Done 2026-09-04, backend 0.14.0 on the NAS and driven on the phone.
 Backend 0.14.0 keeps the bytes under `BUTLER_PHOTOS` beside the database, one directory per pot,
 with the row as the truth: a picture is listed, served and deleted by its row and the directory is
 never read to decide what exists. That settles the rabbit hole about files and rows coming apart in
@@ -66,7 +67,13 @@ that basil replanted with basil leaves no trace.
 One thing found while building: a phone writes the sensor's orientation into EXIF rather than into
 the pixels, and re-encoding drops the tag. Without turning the picture first, every portrait
 photograph would have come back on its side for good — and the pitch's own no-go says there is no
-editing here to fix it with.
+editing here to fix it with. Confirmed with the camera: a picture taken in portrait came back
+1200x1600 and upright, 306 KB, right in the band the 1600-pixel cap was chosen for.
+
+The break drew itself correctly too, including the case it is meant to keep quiet about. A
+photograph taken before the pot had a species opens no break — "nobody said" is not "a different
+plant" — and the marker appeared only where the species actually changed. Deleting a picture took
+the row, the file and the marker with it.
 
 ## For later
 A time-lapse from the strip, and pinning one photo per pot as its face in the garden list.
