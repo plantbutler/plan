@@ -3,7 +3,9 @@ id: pitch-962e46
 kind: pitch
 title: A picture of the plant, over time
 parent: proj-6de564
-status: shaping
+status: in_progress
+start_date: 2026-09-04
+prs: ['plantbutler/backend#18', 'plantbutler/app#13']
 owner: claude
 assignees: [claude]
 reviewers: [jcanton]
@@ -45,6 +47,26 @@ reference: what this plant is supposed to look like.
 ## No-gos
 No editing, cropping or filters. No cloud storage and no sharing off the tailnet. No ML on the
 pictures. No time-lapse video — a strip is a strip.
+
+## Progress
+Built 2026-09-04, not yet driven on a phone — the camera path is the half no JVM test can reach.
+Backend 0.14.0 keeps the bytes under `BUTLER_PHOTOS` beside the database, one directory per pot,
+with the row as the truth: a picture is listed, served and deleted by its row and the directory is
+never read to decide what exists. That settles the rabbit hole about files and rows coming apart in
+opposite directions — a file no row knows about is invisible and harmless, and a row whose file has
+gone is reported as missing rather than served as a broken image. Keeping writes the file then the
+row; deleting removes the row then the file.
+
+The app caps the long edge at 1600 before anything is uploaded, which is the difference between a
+decade of weekly pictures being a couple of hundred megabytes and a couple of dozen gigabytes. The
+break where one plant ended and the next began is drawn from the species each picture was taken
+under, which the backend stamps on the row — no replant event was invented, and the strip is honest
+that basil replanted with basil leaves no trace.
+
+One thing found while building: a phone writes the sensor's orientation into EXIF rather than into
+the pixels, and re-encoding drops the tag. Without turning the picture first, every portrait
+photograph would have come back on its side for good — and the pitch's own no-go says there is no
+editing here to fix it with.
 
 ## For later
 A time-lapse from the strip, and pinning one photo per pot as its face in the garden list.
