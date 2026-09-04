@@ -3,7 +3,9 @@ id: pitch-f9cff1
 kind: pitch
 title: Where is the butler?
 parent: proj-3a84fc
-status: shaping
+status: in_progress
+start_date: 2026-09-04
+prs: ['plantbutler/backend#17', 'plantbutler/app#12']
 owner: claude
 assignees: [claude]
 reviewers: [jcanton]
@@ -43,6 +45,21 @@ development builds — no longer the only source.
 ## No-gos
 No accounts. No discovery scan of the network. No holding several servers at once. No change to the
 single static token the backend already has.
+
+## Progress
+Built 2026-09-04, not yet driven on a phone — adb was off while the queue was worked through.
+Backend 0.13.0 gained `GET /hello`, the one gated route that touches no database, because nothing
+that existed could tell a wrong address from a wrong token: the reads are ungated and answer a
+wrong token exactly as they answer a right one, and every gated route writes something. The app
+asks on first start, proves both with a real call, and keeps them in the encrypted store;
+`butler.properties` survives as the default a development build prefills, and an APK built without
+it carries no token at all.
+
+The rabbit hole about the address no longer being a build constant turned out to have a second
+half the pitch did not name: not only can nothing construct the client once at start-up, an answer
+already in the air from the old address can land on the new one's screen. Every request now runs
+under one cancellable job. The cache also carries the address it came from, so a delete that failed
+cannot show one server's garden under another's name.
 
 ## For later
 A QR code the NAS can show, carrying address and token, so setting up the next phone is a scan.
