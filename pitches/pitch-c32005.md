@@ -3,13 +3,15 @@ id: pitch-c32005
 kind: pitch
 title: A plant can die
 parent: proj-3a84fc
-status: in_progress
+status: done
 owner: claude
 assignees: [claude]
 reviewers: [jcanton]
 priority: medium
 cycle: 1
 start_date: 2026-09-04
+end_date: '2026-09-05'
+prs: ['plantbutler/backend#22', 'plantbutler/app#15']
 tags:
 - backend
 - app
@@ -72,3 +74,27 @@ list is a value that does not move the band, and adding one is a code change on 
 A paused-but-wired status, for a pot that is going away for a month rather than dying. Readings
 that arrived while nothing was mapped are kept and orphaned; a screen that adopts them into a pot
 would be its own pitch.
+
+## Progress
+
+Done 2026-09-05. Backend 0.16.0 (437 tests), app 310, decisions 24-27.
+
+The rework went deeper than the pitch drew it, in one place. An adversarial
+review of the first backend commit raised twenty-four findings; six survived
+verification and three were fail-dry regressions that a green 427-test suite
+had not noticed. The worst: `commands.pot_id` was stamped when the command was
+written, but the water goes down the hose when the board is handed it, and
+those two moments disagree — a manual dose queued before its pot was
+registered carried no stamp at all. A dose the pot half of the cooldown cannot
+see is one the hose floor stops covering the moment that pot is rewired, so
+both layers of decision 7 went at once and a plant could be watered twice
+within minutes. The stamp is re-read at hand-off now.
+
+Two more from the same review: the rules' median window still read by channel,
+so a new plant in a dead one's socket was watered on the dead one's dryness
+(wet, the one direction decision 5 forbids); and deleting commands made
+`commands.id` reuse reachable, so a recycled id inherited the erased pot's
+verdict and its judgement ledger row. `AUTOINCREMENT` settles that class.
+
+Three of the review's findings were about tests that could not fail. They were
+right, and every fix in the second commit is mutation-checked.
