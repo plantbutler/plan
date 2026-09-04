@@ -24,17 +24,25 @@ One and a half person-weeks. Most of it is the honest mapping from care advice o
 scale, not the HTTP call.
 
 ## Solution
-On adding a plant, normalise the species name through a taxonomy service, then query the
-highest-ranked care API that is currently answering, cache the answer on the NAS forever with its
-source and fetch date, and fall back to typing the numbers in when every source fails. A local table
-maps watering regime, soil and pot size onto a target band. Season and the environment channels then
-raise recommendations the app asks you to approve.
+On adding a plant, normalise the species name through GBIF, then ask Trefle — the only online
+source, decided 2026-09-04 after both were probed with real keys — and cache the answer on the NAS
+forever with its fetch date. If Trefle is offline or has nothing for that species, the numbers are
+typed in. No ranking, no second source to fall back to, nothing to reconcile.
+
+Trefle carries no watering regime at all (`soil_humidity` was empty for every species sampled), so
+the target band does not come from it and never did: a local table over soil, pot size and plant
+type proposes one, and the user adjusts it. What Trefle usefully adds is light and atmospheric
+humidity on 0-10 scales, which is context for the sunlight-hours ambition rather than a watering
+number. Season and the environment channels then raise recommendations the app asks you to
+approve.
 
 ## Rabbit holes
-- **Blocked on a key.** The 2026-09-03 re-probe (see the note) found Perenual and Trefle both
-  alive and both requiring one, and keys never enter a repository. Nothing can call a care source
-  until Jacopo has signed up. The taxonomy hop, the cache, the mapping and the type-it-in fallback
-  do not need one and can be built first.
+- The Trefle token is a secret: `deploy.env` beside the butler's own, never a repository. With no
+  token configured the lookup is simply unavailable and every pot is typed in, which has to be a
+  working path rather than an error.
+- Trefle's houseplant coverage is empty, not thin — Monstera, Dracaena, Spathiphyllum and
+  Chlorophytum all resolve and carry nothing; Ficus lyrata is absent. A pot that finds nothing is
+  the normal case, not the sad one, and the screen has to read that way.
 - Our percentage is a two-point calibration between air and tap water, not volumetric water content.
   Any code that treats a published percentage as ours is wrong; care sources give regimes, and the
   numbers stay local.
@@ -43,7 +51,7 @@ raise recommendations the app asks you to approve.
 - A mistyped species name mints a junk cache row unless the taxonomy hop runs first.
 
 ## No-gos
-No scrapers. No mixing or averaging sources: one source wins per plant. No automatic change to a
+No scrapers. No Perenual, and no ranking or fallback chain: Trefle or the user's own typing. No automatic change to a
 watering number without a human approving it. No ML, no weather, no photos.
 
 ## For later
