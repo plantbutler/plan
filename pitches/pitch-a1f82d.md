@@ -3,8 +3,10 @@ id: pitch-a1f82d
 kind: pitch
 title: What does this plant want?
 parent: proj-6de564
-status: in_progress
+status: done
 start_date: 2026-09-04
+end_date: '2026-09-04'
+prs: ['plantbutler/backend#15', 'plantbutler/backend#16', 'plantbutler/app#11']
 owner: claude
 assignees: [claude]
 reviewers: [jcanton]
@@ -62,6 +64,27 @@ automatic change to a watering number without a human approving it. No ML, no we
 photographs of your own plants — that is its own pitch; the care source's picture of the species
 is shown, because a search by common name is confirmed by eye.
 
+## Progress
+Done 2026-09-04, backend 0.12.0 on the NAS and the app on the phone. `GET /species` resolves a name
+through GBIF and asks Trefle about the accepted binomial, both cached; the target band is proposed
+locally and arrives as an offer on each pot, and accepting it is an ordinary pot edit, so no
+watering number is written without somebody tapping Apply.
+
+Two things only the live services could teach. GBIF answers `matchType: NONE` with
+`confidence: 100`, so confidence alone means nothing; and it matches a lowercase binomial but not a
+lowercase genus, which had every single-word genus reading as "no such plant". Two more came from
+review: a lookup held the sqlite write lock across three HTTP timeouts, so somebody typing a plant
+name could have stopped the garden reporting; and the free-text matcher read a cauliflower as a
+flower and "not sandy" as sandy.
+
+The rabbit hole about houseplant coverage was the true one. Monstera deliciosa, Dracaena
+trifasciata and Chlorophytum comosum all resolve and carry no numbers at all — a picture and a
+name, nothing else. Which is why the shortlist and the photographs matter more than the numbers do.
+
 ## For later
+Whether the offer's ceiling should mean anything: `target_high_pct` is stored, validated and shown,
+but the watering rules only ever read `target_low_pct`, so the top of every band is decorative
+until the rules pitch says otherwise.
+
 Fitting the dose against the verdict log — the adaptive dosing the "Plant care data, Planta-style"
 note has been waiting for a season of readings to make possible.
