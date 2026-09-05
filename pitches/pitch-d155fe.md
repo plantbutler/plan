@@ -15,6 +15,7 @@ priority: medium
 depends_on: [pitch-cd0f19, pitch-43c9b2]
 cycle: 1
 start_date: 2026-09-05
+prs: ['plantbutler/backend#25', 'plantbutler/plantbutler#17']
 ---
 ## Problem
 The float can fail in one direction the wiring cannot catch: the magnet comes off the float or

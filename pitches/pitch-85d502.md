@@ -15,6 +15,7 @@ priority: medium
 depends_on: [pitch-d155fe]
 cycle: 1
 start_date: 2026-09-05
+prs: ['plantbutler/app#17']
 ---
 ## Problem
 Two things the butler needs from a human have nowhere to be said: that the tank was refilled, and
