@@ -7,7 +7,7 @@ tags:
 - backend
 created_schema_version: 5
 person_weeks: 0.5
-status: in_progress
+status: done
 owner: claude
 assignees: [claude]
 reviewers: [jcanton]
@@ -15,6 +15,7 @@ priority: medium
 depends_on: [pitch-cd0f19, pitch-43c9b2]
 cycle: 1
 start_date: 2026-09-05
+end_date: '2026-09-06'
 prs: ['plantbutler/backend#25', 'plantbutler/plantbutler#17']
 ---
 ## Problem

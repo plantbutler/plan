@@ -7,7 +7,7 @@ tags:
 - app
 created_schema_version: 5
 person_weeks: 0.25
-status: in_progress
+status: done
 owner: claude
 assignees: [claude]
 reviewers: [jcanton]
@@ -15,6 +15,7 @@ priority: medium
 depends_on: [pitch-d155fe]
 cycle: 1
 start_date: 2026-09-05
+end_date: '2026-09-06'
 prs: ['plantbutler/app#17']
 ---
 ## Problem
